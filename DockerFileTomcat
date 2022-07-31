@@ -1,0 +1,11 @@
+FROM ubuntu:22.04
+RUN useradd -m -d /opt/tomcat -U -s /bin/false tomcat
+RUN apt update
+apt install -y default-jdk
+RUN apt install -y tomcat
+RUN apt install -y mc
+RUN apt install -y htop
+EXPOSE 80
+RUN rm -rf /usr/local/tomcat9/webapps/*
+ADD index.html /usr/local/tomcat9/webapps
+CMD ["catalina.sh", "start"]
