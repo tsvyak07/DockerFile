@@ -136,4 +136,4 @@ you can run project (you can change ports and name) with name you build image
 you can see docker status running container with you example name
 
 
-after that you can open in your web browser http://ip server:8081/SampleWebApp
+after that you can open in your web browser http://ip server:8082/hello-1.0/
