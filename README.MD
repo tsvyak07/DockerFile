@@ -108,28 +108,31 @@ This test srv with Tomcat and default JDK
 
 -------------------------------------------------------------------------------------
 
-Last project this File DockerFileMVTC (Tomcat +default JDK +Naven + boxfuse-sample )
-
+Last project this File DockerFileMVTC (Tomcat +default JDK +Maven + boxfuse-sample )
+fist step you need rename
 
 DockerFile->DockerFile_old
+<br>
 DockerFileTomcat -> DockerFile
 
 <b>
 mv dockerfile dockerfile_old
+<br>
 mv DockerFileMVTC dockerfile
 </b>
 
 after that you can use previously steps (build/run project)
 
-docker build -t [Name Of the Image]  .
+<b> docker build -t [Name Of the Image]  .</b>
 
 when build finished you can check result
 
 <b>docker images</b>
 
-you can run project (you can change ports and name) with name you build image
+if you see last  [Name Of the Image] you can run project <br>
+(you can change ports and name) with name you build image
 
-<b>docker container run -it -d --name tomcatcontainer2 -p 8082:8080 [Name Of the Image]</b>
+<b>docker container run -it -d --name tomcatcontainer2(example name) -p 8082:8080 [Name Of the Image]</b>
 
 <b>docker ps -a</b>
 
