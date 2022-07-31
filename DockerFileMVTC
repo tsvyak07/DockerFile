@@ -1,3 +1,4 @@
+
 FROM ubuntu:22.04
 MAINTAINER tsvyake@gmail.com
 RUN mkdir /opt/tomcat/
@@ -9,12 +10,11 @@ RUN apt install -y htop
 RUN apt install -y wget
 RUN apt install -y maven
 RUN apt install -y git
-WORKDIR /app
+WORKDIR /tmp
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello
 
-WORKDIR /app
-COPY --from=0 /app/boxfuse-sample-java-war-hello /app
-RUN mvn package
+WORKDIR /tmp/boxfuse-sample-java-war-hello/
+RUN mvn clean install
 
 WORKDIR /opt/tomcat
 RUN wget  https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.23/bin/apache-tomcat-10.0.23.tar.gz
