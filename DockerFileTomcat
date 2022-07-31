@@ -2,16 +2,17 @@ FROM ubuntu:22.04
 MAINTAINER tsvyake@gmail.com
 RUN mkdir /opt/tomcat/
 RUN useradd -m -d /opt/tomcat -U -s /bin/false tomcat
-RUN apt update
-RUN apt install -y default-jdk
+RUN apt update && apt upgrade -y
+RUN apt-get install -y openjdk-18-jdk
 RUN apt install -y mc
 RUN apt install -y htop
+RUN apt install -y wget
 WORKDIR /opt/tomcat
-RUN curl -O https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.23/bin/apache-tomcat-10.0.23.tar.gz
+RUN wget  https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.23/bin/apache-tomcat-10.0.23.tar.gz
 RUN tar xvfz apache*.tar.gz
 RUN mv apache-tomcat-10.0.23/* /opt/tomcat/.
 RUN java -version
 WORKDIR /opt/tomcat/webapps
-RUN curl -O -L https://github.com/AKSarav/SampleWebApp/raw/master/dist/SampleWebApp.war
-EXPOSE 8080
+RUN wget https://github.com/AKSarav/SampleWebApp/raw/master/dist/SampleWebApp.war
+EXPOSE 8888
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
