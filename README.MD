@@ -11,7 +11,7 @@ nex step cd folder project
 and need build project with your example name 
 
 
-<b>docker build -t example name .</b>
+<b>docker build -t [Name Of the Image]  .</b>
 
 
 
@@ -44,7 +44,7 @@ mv DockerFilenew dockerfile
 </b>
 
 after that you can use previously steps (build/run project)
-
+docker build -t [Name Of the Image]  .
 when you get message
 
 Successfully built **********
