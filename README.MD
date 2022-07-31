@@ -102,3 +102,8 @@ you can see docker status running container with you example name
 
 
 after that you can open in your web browser http://ip server:8081/SampleWebApp
+
+
+This test srv with Tomcat and default JDK 
+
+-------------------------------------------------------------------------------------
