@@ -8,6 +8,7 @@ RUN apt install -y mc
 RUN apt install -y htop
 RUN apt install -y wget
 RUN apt install -y maven
+RUN apt install -y git
 WORKDIR /opt/tomcat
 RUN wget  https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.23/bin/apache-tomcat-10.0.23.tar.gz
 RUN tar xvfz apache*.tar.gz
