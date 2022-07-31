@@ -29,4 +29,11 @@ you can run project (you can change ports and name) with name you build image
 
 if you want to run new Ubuntu image you need rename file DockerFilenew -> DockerFile
 and old DockerFile->DockerFile_old
+<b>
+mv dockerfile dockerfile_old
 
+mv DockerFilenew dockerfile
+
+</b>
+
+after that you can use previously steps (build/run project)
