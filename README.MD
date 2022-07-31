@@ -1,12 +1,12 @@
 Hello if you want tu run application you need clone project
 
 
-git clone 
+<b>git clone </b>
 
 nex step cd folder project
 
 
-cd DockerFile
+<b>cd DockerFile</b>
 
 and need build project with your example name 
 
