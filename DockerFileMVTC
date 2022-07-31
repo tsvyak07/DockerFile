@@ -15,7 +15,7 @@ RUN java -version
 RUN wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz -P /tmp
 RUN tar xf /tmp/apache-maven-*.tar.gz -C /opt
 RUN ln -s /opt/apache-maven-3.8.4 /opt/maven
-ADD index.html /etc/profile.d/
+ADD maven.sh /etc/profile.d/
 RUN chmod +x /etc/profile.d/maven.sh
 RUN source /etc/profile.d/maven.sh
 RUN mvn -version
