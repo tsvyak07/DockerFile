@@ -34,8 +34,10 @@ you can see docker status running container with you example name
 
 after that you can open ip your server + port 88 and you can get web page 
 
-if you want to run new Ubuntu image you need rename file DockerFilenew -> DockerFile
-and old DockerFile->DockerFile_old
+if you want to run new Ubuntu image you need rename file
+DockerFile->DockerFile_old
+DockerFilenew -> DockerFile
+ 
 
 <b>
 mv dockerfile dockerfile_old
@@ -71,3 +73,31 @@ cat /etc/os-release
 you can see you version os Ubuntu
 
 try run mc app or htop app 
+_________________________________________________________________________________
+
+
+How to run Docker Tomcat
+
+fist step you need rename 
+
+
+DockerFile->DockerFile_old
+DockerFileTomcat -> DockerFile
+
+<b>
+mv dockerfile dockerfile_old
+mv DockerFileTomcat dockerfile
+</b>
+
+after that you can use previously steps (build/run project)
+docker build -t [Name Of the Image]  .
+
+you can run project (you can change ports and name) with name you build image
+
+docker container run -it -d --name tomcatcontainer1 -p 8081:8080 [Name Of the Image] 
+
+
+<b>docker ps -a</b>
+
+
+you can see docker status running container with you example name
