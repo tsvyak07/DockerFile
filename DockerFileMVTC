@@ -21,6 +21,8 @@ RUN java -version
 #RUN source /etc/profile.d/maven.sh
 #RUN mvn -version
 WORKDIR /opt/tomcat/webapps
-RUN wget https://github.com/AKSarav/SampleWebApp/raw/master/dist/SampleWebApp.war
+RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello
+RUN cd boxfuse-sample-java-war-hello
+RUN mvn package
 EXPOSE 8080
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]

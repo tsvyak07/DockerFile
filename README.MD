@@ -123,6 +123,10 @@ after that you can use previously steps (build/run project)
 
 docker build -t [Name Of the Image]  .
 
+when build finished you can check result
+
+<b>docker images</b>
+
 you can run project (you can change ports and name) with name you build image
 
 <b>docker container run -it -d --name tomcatcontainer2 -p 8082:8080 [Name Of the Image]</b>
