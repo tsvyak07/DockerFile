@@ -60,3 +60,7 @@ docker ps -a
 you can see docker status running container with you example name
 
 after that you can open ip your server + port 98 and you can get web page 
+
+and you can check os release in docker container 
+
+docker exec -it example name(or id container) /bin/bash
