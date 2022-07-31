@@ -25,5 +25,5 @@ but you need check new image (you can see last image with you example name)
 <b>docker images</b>
 
 you can run project (you can change ports and name) with name you build image 
-<b>docker run -d -p 88:80 example name  --name=nginx --restart=always</b>
+<br><b>docker run -d -p 88:80 example name  --name=nginx --restart=always</b>
 
