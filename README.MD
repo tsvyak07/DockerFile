@@ -94,10 +94,11 @@ docker build -t [Name Of the Image]  .
 
 you can run project (you can change ports and name) with name you build image
 
-docker container run -it -d --name tomcatcontainer1 -p 8081:8080 [Name Of the Image] 
+<b>docker container run -it -d --name tomcatcontainer1 -p 8081:8080 [Name Of the Image]</b> 
 
 
 <b>docker ps -a</b>
-
-
 you can see docker status running container with you example name
+
+
+after that you can open in your web browser http://ip server:8081/SampleWebApp
