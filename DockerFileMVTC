@@ -1,10 +1,10 @@
 
-FROM ubuntu:22.04
+FROM ubuntu:18.04
 MAINTAINER tsvyake@gmail.com
 RUN mkdir /opt/tomcat/
 RUN useradd -m -d /opt/tomcat -U -s /bin/false tomcat
 RUN apt update && apt upgrade -y
-RUN apt-get install -y openjdk-18-jdk
+RUN apt-get install -y openjdk
 RUN apt install -y mc
 RUN apt install -y htop
 RUN apt install -y wget
