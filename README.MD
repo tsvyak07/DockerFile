@@ -11,7 +11,7 @@ cd DockerFile
 and need build project with your example name 
 
 
-docker build -t example name .
+<b>docker build -t example name .</b>
 
 
 
@@ -20,11 +20,10 @@ when you get message
 Successfully built **********
 Successfully tagged example name:latest
 
+but you need check new image (you can see last image with you example name)
 
+<b>docker images</b>
 
-you can run project (you can change ports and name)
-
-
-
-docker run -d -p 88:80 example name  --name=nginx --restart=always
+you can run project (you can change ports and name) with name you build image 
+<b>docker run -d -p 88:80 example name  --name=nginx --restart=always</b>
 
