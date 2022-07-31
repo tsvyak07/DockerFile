@@ -27,3 +27,6 @@ but you need check new image (you can see last image with you example name)
 you can run project (you can change ports and name) with name you build image 
 <br><b>docker run -d -p 88:80 example name  --name=nginx --restart=always</b>
 
+if you want to run new Ubuntu image you need rename file DockerFilenew -> DockerFile
+and old DockerFile->DockerFile_old
+
