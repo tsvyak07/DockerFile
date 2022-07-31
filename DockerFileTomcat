@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 RUN useradd -m -d /opt/tomcat -U -s /bin/false tomcat
 RUN apt update
-apt install -y default-jdk
+RUN apt install -y default-jdk
 RUN apt install -y tomcat
 RUN apt install -y mc
 RUN apt install -y htop
